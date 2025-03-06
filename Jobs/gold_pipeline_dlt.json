@@ -1,0 +1,22 @@
+{
+  "name": "Gold Pipeline DLT",
+  "notebook_task": {
+    "notebook_path": "/Workspace/Users/juan.godoy@perficient.com/bakehouse-assessment/Notebooks/04_Gold",
+    "base_parameters": {}
+  },
+  "target": "jp_assessment.latam_lab_gold",
+  "pipeline_config": {
+    "continuous": false,
+    "pipeline_mode": "BATCH"
+  },
+  "schedule": {
+    "quartz_cron_expression": "0 8 * * 1-5",
+    "timezone_id": "America/New_York"
+  },
+  "timeout_seconds": 1200,
+  "email_notifications": {
+    "on_start": [],
+    "on_success": ["juan.godoy@perficient.com"],
+    "on_failure": ["juan.godoy@perficient.com"]
+  }
+}
