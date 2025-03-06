@@ -14,7 +14,7 @@
     "pipeline_mode": "BATCH"
   },
   "schedule": {
-    "quartz_cron_expression": "0 8 * * 1-5",
+    "quartz_cron_expression": "0 0 8 ? * MON-FRI",
     "timezone_id": "America/New_York"
   },
   "timeout_seconds": 1200,
