@@ -12,8 +12,8 @@
   ],
   "libraries": [
     {
-      "notebook": {
-        "path": "/Workspace/Users/juan.godoy@perficient.com/bakehouse-assessment/Notebooks/04_Gold"
+      "python": {
+        "path":  "/Workspace/Users/juan.godoy@perficient.com/bakehouse-assessment/dlt_pipelines/gold_pipeline.py"
       }
     }
   ],
