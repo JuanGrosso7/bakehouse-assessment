@@ -27,11 +27,13 @@
     {
       "job_cluster_key": "job_cluster",
       "new_cluster": {
-        "spark_version": "11.3.x-scala2.12",
+        "spark_version": "16.2.x-scala2.12",
         "node_type_id": "i3.xlarge",
         "num_workers": 2,
+        "spark_conf": {
+          "spark.databricks.delta.deletionVectors.enabled": "true"
+        },
         "autoscale": null,
-        "spark_conf": {},
         "custom_tags": {},
         "init_scripts": []
       }
@@ -46,8 +48,11 @@
   },
   "email_notifications": {
     "on_start": [],
-    "on_success": ["juan.godoy@perficient.com"],
-    "on_failure": ["juan.godoy@perficient.com"]
+    "on_success": [
+      "juan.godoy@perficient.com"
+    ],
+    "on_failure": [
+      "juan.godoy@perficient.com"
+    ]
   }
 }
-

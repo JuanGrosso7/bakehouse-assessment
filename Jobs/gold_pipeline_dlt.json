@@ -2,6 +2,14 @@
   "name": "Gold Pipeline DLT",
   "target": "jp_assessment.latam_lab_gold",
   "storage": "/mnt/dlt/jp_assessment/gold",
+  "clusters": [
+    {
+      "label": "default",
+      "spark_conf": {
+        "spark.databricks.delta.deletionVectors.enabled": "true"
+      }
+    }
+  ],
   "libraries": [
     {
       "notebook": {
@@ -20,8 +28,11 @@
   "timeout_seconds": 1200,
   "email_notifications": {
     "on_start": [],
-    "on_success": ["juan.godoy@perficient.com"],
-    "on_failure": ["juan.godoy@perficient.com"]
+    "on_success": [
+      "juan.godoy@perficient.com"
+    ],
+    "on_failure": [
+      "juan.godoy@perficient.com"
+    ]
   }
 }
-
