@@ -1,4 +1,5 @@
 {
+  "pipeline_id": "c7472558-3a77-4f48-b99b-e3ddbc0a41e3",
   "name": "Gold Pipeline DLT",
   "target": "jp_assessment.latam_lab_gold",
   "storage": "/mnt/dlt/jp_assessment/gold",
@@ -13,7 +14,7 @@
   "libraries": [
     {
       "python": {
-        "path":  "/Workspace/Users/juan.godoy@perficient.com/bakehouse-assessment/dlt_pipelines/gold_pipeline.py"
+        "path": "/Workspace/Users/juan.godoy@perficient.com/bakehouse-assessment/dlt_pipelines/gold_pipeline.py"
       }
     }
   ],
