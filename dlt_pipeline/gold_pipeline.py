@@ -5,15 +5,14 @@ from pyspark.sql import functions as F
 def transactions_per_product():
     df = spark.table("jp_assessment.latam_lab_silver.sales_transactions")
     df = df.withColumn("trans_date", F.to_date("dateTime"))
-    # Pivot: for each day, sum totalPrice per product
-    df_pivot = df.groupBy("trans_date").pivot("product").agg(F.sum("totalPrice").alias("total_sales"))
+    df = df.withColumn("product_sanitized", F.regexp_replace("product", " ", "_"))
+    df_pivot = df.groupBy("trans_date").pivot("product_sanitized").agg(F.sum("totalPrice").alias("total_sales"))
     return df_pivot
 
 @dlt.table(comment="Detailed transactions enriched with customer info")
 def transactions_details():
     df_trans = spark.table("jp_assessment.latam_lab_silver.sales_transactions")
     df_customers = spark.table("jp_assessment.latam_lab_silver.sales_customers")
-    # Join on customerID to add customer details (name, address, email)
     df_details = df_trans.join(df_customers, "customerID", "left") \
         .select(
             "transactionID",
