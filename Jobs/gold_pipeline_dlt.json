@@ -15,7 +15,7 @@
   "libraries": [
     {
       "python": {
-        "path": "/Workspace/Users/juan.godoy@perficient.com/bakehouse-assessment/dlt_pipelines/gold_pipeline.py"
+        "path": "/Workspace/Users/juan.godoy@perficient.com/bakehouse-assessment/dlt_pipeline/gold_pipeline.py"
       }
     }
   ],
